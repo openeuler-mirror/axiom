@@ -1,0 +1,12 @@
+--- modules/axiom-api/src/main/java/org/apache/axiom/attachments/MIMEMessage.java.orig	2018-04-23 10:43:14.739416850 +0100
++++ modules/axiom-api/src/main/java/org/apache/axiom/attachments/MIMEMessage.java	2018-04-23 10:43:57.233221915 +0100
+@@ -124,8 +124,7 @@
+             filterIS = null;
+         }
+         
+-        MimeConfig config = new MimeConfig();
+-        config.setStrictParsing(true);
++        MimeConfig config = MimeConfig.custom().setStrictParsing(true).build();
+         parser = new MimeTokenStream(config);
+         parser.setRecursionMode(RecursionMode.M_NO_RECURSE);
+         parser.parseHeadless(is, contentTypeString);
