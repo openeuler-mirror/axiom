@@ -1,7 +1,6 @@
 Name:                axiom
 Version:             1.2.14
 Release:             1
-Epoch:               0
 Summary:             Axis Object Model
 License:             ASL 2.0
 Url:                 http://ws.apache.org/commons/axiom/
